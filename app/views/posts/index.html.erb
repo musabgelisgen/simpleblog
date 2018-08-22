@@ -1,7 +1,13 @@
 <h1>Blog Posts</h1>
 
 <% @posts.each do |post| %>
-  <h3><%= post.title %></h3>
-  <p> <%= post.body %></p>
-  
+  <div class="card">
+    <div class="card-header">
+      <h3><%= post.title %></h3>
+      <p> <%= post.body %></p>
+      <%= link_to 'Read More', post_path(post), :class => 'btn btn-primary' %>
+    </div>
+  </div>
+
+
 <% end %>
