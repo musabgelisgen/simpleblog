@@ -1,2 +1,7 @@
-<p2> <%= @post.title %></p2>
-<p> <%= @post.body %></p>
+<div class="card">
+  <div class="card-header">
+    <h2> <%= @post.title %></h2>
+    <p class="lead" style="text-align:justify"> <%= @post.body %></p>
+    <%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-warning' %>
+  </div>
+</div>
