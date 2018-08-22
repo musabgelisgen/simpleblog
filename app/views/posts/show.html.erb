@@ -2,6 +2,15 @@
   <div class="card-header">
     <h2> <%= @post.title %></h2>
     <p class="lead" style="text-align:justify"> <%= @post.body %></p>
+    <hr>
     <%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-warning' %>
+    <%= link_to 'Delete', post_path(@post),
+                method: :delete,
+                data: {confirm: 'Are you sure?'},
+                :class => 'btn btn-danger' %>
+    <hr>
+
+    <%= render 'comments/comments' %>
+    <%= render 'comments/form' %>
   </div>
 </div>
