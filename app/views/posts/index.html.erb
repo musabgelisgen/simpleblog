@@ -1,13 +1,21 @@
-<h1>Blog Posts</h1>
+<div class="card" style="-webkit-box-shadow: 0px 0px 56px -4px rgba(237,23,34,1);
+    -moz-box-shadow: 0px 0px 56px -4px rgba(237,23,34,1);
+    box-shadow: 0px 0px 56px -4px rgba(237,23,34,1); opacity: 0.8;">
+  <div class="card-header">
 
-<% @posts.each do |post| %>
-  <div class="card">
-    <div class="card-header">
-      <h3><%= post.title %></h3>
-      <p> <%= post.body %></p>
-      <%= link_to 'Read More', post_path(post), :class => 'btn btn-primary' %>
-    </div>
+    <h1>Blog Posts</h1>
+
+    <% @posts.each do |post| %>
+      <div class="card">
+        <div class="card-header">
+          <h3><%= post.title %></h3>
+          <p> <%= post.body %></p>
+          <%= link_to 'Read More', post_path(post), :class => 'btn btn-primary' %>
+        </div>
+      </div>
+
+
+    <% end %>
+
   </div>
-
-
-<% end %>
+</div>
