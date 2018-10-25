@@ -37,10 +37,10 @@ bundle exec rake db:setup
 You can start the rails server using the command given below.
 
 ```ruby
-bundle exec rails s
+bundle exec rails server
 ```
 
-And now you can visit the site with the URL http://localhost:3000
+And now you can visit the site with the URL http://localhost:3000 (by default)
 
 ##### 5. Create. Manage. 
 
